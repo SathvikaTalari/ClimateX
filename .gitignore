@@ -1,0 +1,63 @@
+# Environment Variables & Secrets (CRITICAL: Never commit credentials)
+.env
+.env.*
+!.env.example
+*.env
+backend/.env
+ml-service/.env
+frontend/.env
+frontend/.env*.local
+!*/.env.example
+
+# Python Virtual Environments
+venv/
+.venv/
+*/venv/
+*/.venv/
+env/
+*/env/
+ENV/
+*/ENV/
+
+# Python Caches & Build Artifacts
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*/.egg-info/
+dist/
+build/
+*.so
+.Python
+
+# Pytest & Testing Caches
+.pytest_cache/
+*/.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node.js & Frontend Artifacts
+node_modules/
+*/node_modules/
+.next/
+*/.next/
+out/
+*/out/
+*.tsbuildinfo
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Alembic bytecode
+alembic/versions/*.pyc
+backend/alembic/versions/*.pyc

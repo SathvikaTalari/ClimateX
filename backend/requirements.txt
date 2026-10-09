@@ -1,0 +1,22 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+sqlalchemy>=2.0.36
+alembic>=1.13.3
+psycopg2-binary>=2.9.9
+geoalchemy2>=0.15.2
+pydantic>=2.10.0
+pydantic-settings>=2.5.2
+python-dotenv>=1.0.1
+
+# ─── Phase 4 & 5: EO Data Pipeline ───────────────────────────────────────────────
+httpx>=0.27.0           # Async HTTP for provider API calls
+rasterio>=1.3.0         # GeoTIFF/COG metadata validation and processing
+shapely>=2.0.0          # Geometry helpers for bounding-box construction
+geopandas>=0.14.0       # Vector handling for spatial statistics
+aiofiles>=23.2.1        # Async file I/O for raster downloads
+Pillow>=10.3.0          # Required for PNG composite generation
+
+# ─── Testing ─────────────────────────────────────────────────────────────────
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+anyio>=4.4.0

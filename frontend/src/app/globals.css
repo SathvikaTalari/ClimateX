@@ -1,0 +1,74 @@
+@import 'maplibre-gl/dist/maplibre-gl.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 dark:bg-earth-950 dark:text-slate-100 font-sans antialiased overflow-x-hidden transition-colors duration-300;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.06) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-200 dark:bg-earth-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-400/60 dark:bg-slate-700/80 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500 dark:bg-slate-600;
+}
+
+/* Custom MapLibre Popup Overrides */
+.maplibregl-popup-content {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+  color: #0f172a !important;
+  padding: 12px 16px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dark .maplibregl-popup-content {
+  background: rgba(11, 15, 25, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.maplibregl-popup-anchor-top .maplibregl-popup-tip,
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
+.maplibregl-popup-anchor-left .maplibregl-popup-tip,
+.maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-top-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.dark .maplibregl-popup-anchor-top .maplibregl-popup-tip,
+.dark .maplibregl-popup-anchor-bottom .maplibregl-popup-tip,
+.dark .maplibregl-popup-anchor-left .maplibregl-popup-tip,
+.dark .maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-top-color: rgba(11, 15, 25, 0.92) !important;
+  border-bottom-color: rgba(11, 15, 25, 0.92) !important;
+}
+
+.glass-panel {
+  @apply bg-white/80 dark:bg-earth-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-800/80 rounded-xl shadow-md dark:shadow-xl transition-all duration-300;
+}
+
+.glass-panel-hover {
+  @apply transition-all duration-300 hover:border-cyanGlow-500/50 hover:shadow-glow-cyan;
+}
